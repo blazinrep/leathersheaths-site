@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesche Digger & Garrett Pinpointer Combo Sheath | Leathersheaths.net</title>
+    <meta name="description" content="Specialized leather combo rig for metal detectorists. Clean carry solution for Lesche digging tool and Garrett pinpointer. Heavy-duty field-tested design.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        :root {
+            /* Premium Leather Artisan Palette */
+            --primary: #5c3a21;            /* Rich Oiled Chestnut Leather */
+            --primary-hover: #422817;      /* Dark Horween CXL Leather */
+            --background-color: #fcfbfa;   /* Clean Raw Canvas / Eggshell */
+            --text-color: #1a1613;         /* Deep Charcoal Bark */
+            --accent-brass: #ad8350;       /* Antique Brass Hardware */
+        }
+
+        /* Pico v1 defines its own blue --primary on a higher-specificity selector
+           (:root:not([data-theme=dark])). We override at matching specificity so the
+           chestnut palette wins instead of Pico's default blue. */
+        :root:not([data-theme=dark]),
+        [data-theme=light] {
+            --primary: #5c3a21;
+            --primary-hover: #422817;
+            --primary-focus: rgba(92, 58, 33, 0.25);
+            --primary-inverse: #ffffff;
+        }
+
+        /* Force background and text compliance (Pico dark-mode guard) */
+        html, body {
+            background-color: var(--background-color) !important;
+            color: var(--text-color) !important;
+            padding-top: 20px;
+        }
+
+        /* Inline text links — chestnut instead of Pico's default blue */
+        a {
+            color: var(--primary) !important;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        a:hover { color: var(--primary-hover) !important; }
+        /* Button-styled links keep their white label */
+        a.card-btn { color: #ffffff !important; text-decoration: none; }
+
+        /* Rugged Workshop Hero Banner with thick leather-colored accent bar */
+        .hero {
+            background: #f4eee1 !important; /* Saddle Blanket Cream */
+            padding: 45px 20px;
+            margin-bottom: 35px;
+            text-align: center;
+            border-left: 6px solid var(--primary);
+            border-top: 1px solid #e3dac9;
+            border-right: 1px solid #e3dac9;
+            border-bottom: 1px solid #e3dac9;
+            border-radius: 0; /* square edges required for single-sided accent border */
+        }
+
+        .hero h1 {
+            color: var(--primary) !important; /* Title branded to the leather tone */
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #5a5045 !important;
+            font-style: italic;
+        }
+
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+        .card {
+            background: #ffffff !important;
+            border: 1px solid #e3dac9;
+            border-left: 4px solid var(--primary); /* Chestnut accent tie-in */
+            border-radius: 6px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.02);
+        }
+
+        .card h3 {
+            color: var(--primary) !important; /* Subheaders match the core leather tone */
+        }
+
+        /* Premium Action Buttons */
+        .card-btn {
+            background-color: var(--primary) !important;
+            border: none;
+            width: 100%;
+            text-align: center;
+            color: #ffffff !important;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background 0.2s ease;
+        }
+        .card-btn:hover { background-color: var(--primary-hover) !important; }
+
+        /* Video Placeholder Styling */
+        .video-placeholder {
+            background: #e8e0d0;
+            border: 2px dashed var(--primary);
+            border-radius: 8px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .video-placeholder.large {
+            height: 400px;
+        }
+
+        /* Feature List Styling */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e3dac9;
+            color: #3d352d;
+        }
+
+        .feature-list li:before {
+            content: "✓ ";
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* Product Highlight Section */
+        .product-highlight {
+            background: #ffffff;
+            border: 1px solid #e3dac9;
+            border-left: 4px solid var(--accent-brass);
+            border-radius: 6px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .product-highlight h3 {
+            color: var(--primary) !important;
+            margin-bottom: 15px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--primary);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 6px;
+            margin: 40px 0;
+        }
+
+        .cta-section h2 {
+            color: #ffffff !important;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            color: #f4eee1;
+            margin-bottom: 25px;
+        }
+
+        .cta-button {
+            background: #ffffff;
+            color: var(--primary) !important;
+            padding: 15px 40px;
+            font-weight: 700;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background: #f4eee1;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <h1>Lesche Digger & Garrett Pinpointer Combo Sheath</h1>
+            <p>Specialized leather rig for serious detectorists. Clean carry, built to last.</p>
+        </header>
+
+        <!-- Main Product Video Placeholder -->
+        <div class="video-placeholder large">
+            [PRODUCT VIDEO - Combo Rig Overview & Field Demo]
+        </div>
+
+        <section class="product-highlight">
+            <h3>The Problem: Clunky Gear, Slow Recovery</h3>
+            <p>Metal detecting requires quick, efficient gear access. Most detectorists struggle with:</p>
+            <ul class="feature-list">
+                <li>Diggers and pinpointers rattling around in separate pouches</li>
+                <li>Constant digging through bags to find tools</li>
+                <li>Awkward belt setups that shift during active hunting</li>
+                <li>Lost recovery time when targets are scarce</li>
+            </ul>
+        </section>
+
+        <section class="card-grid">
+            <div class="card">
+                <div>
+                    <h3>Lesche Digger Integration</h3>
+                    <p>Custom-molded leather sheath designed specifically for the Lesche digging tool. Heavy-duty 8/9 oz vegetable-tanned leather with reinforced stitching at stress points.</p>
+                    <div class="video-placeholder">
+                        [VIDEO - Lesche Digger Fit & Function]
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Garrett Pinpointer Mount</h3>
+                    <p>Secure snap-loop retention system for your Garrett pinpointer. Quick-release design for one-handed deployment when you've got a target in the hole.</p>
+                    <div class="video-placeholder">
+                        [VIDEO - Pinpointer Quick Release Demo]
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-highlight">
+            <h3>Why This Combo Rig Works</h3>
+            <p>After 100+ hours of field testing across parks, beaches, and relic sites, this design solves the core detectorist pain points:</p>
+            <ul class="feature-list">
+                <li><strong>Unified Carry:</strong> Both tools on one belt position — no more shifting gear</li>
+                <li><strong>Silent Operation:</strong> Leather dampens tool clatter, preserving stealth</li>
+                <li><strong>Mud-Ready:</strong> Veg-tan leather handles wet conditions and cleans up easily</li>
+                <li><strong>Belt Stability:</strong> Wide, reinforced backing prevents rotation during active use</li>
+                <li><strong>Quick Access:</strong> Both tools deploy in under 2 seconds when you need them</li>
+            </ul>
+        </section>
+
+        <!-- Field Testing Video -->
+        <div class="video-placeholder large">
+            [VIDEO - Field Testing: Beach, Park, and Woodland Conditions]
+        </div>
+
+        <section class="card-grid">
+            <div class="card">
+                <div>
+                    <h3>Build Your Own Rig</h3>
+                    <p>Complete materials list and step-by-step tutorial for crafting this combo sheath. Includes printable pattern, leather sourcing guide, and hardware recommendations.</p>
+                    <a href="#" class="button card-btn">Get the Free Pattern & Tutorial</a>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Buy Recommended Tools</h3>
+                    <p>Curated list of the exact Lesche digger and Garrett pinpointer models used in testing, plus leather tools and supplies for building your own rig.</p>
+                    <a href="#" class="button card-btn">View Tool Recommendations</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to Upgrade Your Detecting Setup?</h2>
+            <p>Join 2,000+ detectorists who've streamlined their gear with this combo rig design.</p>
+            <a href="#" class="cta-button">Download the Free Pattern</a>
+        </section>
+
+        <section class="product-highlight">
+            <h3>Technical Specifications</h3>
+            <ul class="feature-list">
+                <li><strong>Leather:</strong> 8-9 oz vegetable-tanned chestnut</li>
+                <li><strong>Stitching:</strong> 532 bonded nylon thread, double-stitched stress points</li>
+                <li><strong>Hardware:</strong> Solid brass snaps and copper rivets</li>
+                <li><strong>Belt Width:</strong> Fits 1.5" to 2" belts</li>
+                <li><strong>Finish:</strong> Fiebing's Acrylic Resolene for weather resistance</li>
+                <li><strong>Weight:</strong> 6.2 oz (empty)</li>
+            </ul>
+        </section>
+
+        <!-- Build Process Video -->
+        <div class="video-placeholder large">
+            [VIDEO - Complete Build Process: From Pattern to Finished Rig]
+        </div>
+
+    </main>
+
+    <footer class="container" style="text-align: center; margin-top: 40px; padding: 20px 0; border-top: 1px solid #e3dac9; font-size: 0.85rem; color: #7a7266;">
+        &copy; 2026 Leathersheaths.net. All rights reserved.
+    </footer>
+
+</body>
+</html>
