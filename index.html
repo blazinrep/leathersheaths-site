@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Leather Sheaths &amp; Gear Reviews | Leathersheaths.net</title>
+    <meta name="description" content="Deep-dive testing and rugged field evaluations of premium leather knife sheaths — fixed-blade survival sheaths, scout carry conversions, and maintenance guides.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        :root {
+            /* Premium Leather Artisan Palette */
+            --primary: #5c3a21;            /* Rich Oiled Chestnut Leather */
+            --primary-hover: #422817;      /* Dark Horween CXL Leather */
+            --background-color: #fcfbfa;   /* Clean Raw Canvas / Eggshell */
+            --text-color: #1a1613;         /* Deep Charcoal Bark */
+            --accent-brass: #ad8350;       /* Antique Brass Hardware */
+        }
+
+        /* Pico v1 defines its own blue --primary on a higher-specificity selector
+           (:root:not([data-theme=dark])). We override at matching specificity so the
+           chestnut palette wins instead of Pico's default blue. */
+        :root:not([data-theme=dark]),
+        [data-theme=light] {
+            --primary: #5c3a21;
+            --primary-hover: #422817;
+            --primary-focus: rgba(92, 58, 33, 0.25);
+            --primary-inverse: #ffffff;
+        }
+
+        /* Force background and text compliance (Pico dark-mode guard) */
+        html, body {
+            background-color: var(--background-color) !important;
+            color: var(--text-color) !important;
+            padding-top: 20px;
+        }
+
+        /* Inline text links — chestnut instead of Pico's default blue */
+        a {
+            color: var(--primary) !important;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        a:hover { color: var(--primary-hover) !important; }
+        /* Button-styled links keep their white label */
+        a.card-btn { color: #ffffff !important; text-decoration: none; }
+
+        /* Rugged Workshop Hero Banner with thick leather-colored accent bar */
+        .hero {
+            background: #f4eee1 !important; /* Saddle Blanket Cream */
+            padding: 45px 20px;
+            margin-bottom: 35px;
+            text-align: center;
+            border-left: 6px solid var(--primary);
+            border-top: 1px solid #e3dac9;
+            border-right: 1px solid #e3dac9;
+            border-bottom: 1px solid #e3dac9;
+            border-radius: 0; /* square edges required for single-sided accent border */
+        }
+
+        .hero h1 {
+            color: var(--primary) !important; /* Title branded to the leather tone */
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #5a5045 !important;
+            font-style: italic;
+        }
+
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+        .card {
+            background: #ffffff !important;
+            border: 1px solid #e3dac9;
+            border-left: 4px solid var(--primary); /* Chestnut accent tie-in */
+            border-radius: 6px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.02);
+        }
+
+        .card h3 {
+            color: var(--primary) !important; /* Subheaders match the core leather tone */
+        }
+
+        /* Premium Action Buttons */
+        .card-btn {
+            background-color: var(--primary) !important;
+            border: none;
+            width: 100%;
+            text-align: center;
+            color: #ffffff !important;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background 0.2s ease;
+        }
+        .card-btn:hover { background-color: var(--primary-hover) !important; }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <h1>Premium Leather Sheaths &amp; Gear Reviews</h1>
+            <p>Deep-dive testing, rugged field evaluations, and premium layout designs for serious edge tools.</p>
+        </header>
+        <section class="card-grid">
+            <div class="card">
+                <div>
+                    <h3>Fixed-Blade Survival Sheaths</h3>
+                    <p>Heavy-duty leather options built to handle brutal elements and keep your primary edge secure.</p>
+                </div>
+                <a href="fixed-blade.html" class="button card-btn">Read the fixed-blade survival sheath reviews</a>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Scout Carry Conversions</h3>
+                    <p>The best horizontal, low-profile leather options for comfortable, accessible everyday deployment.</p>
+                </div>
+                <a href="scout-carry.html" class="button card-btn">Explore the scout carry conversion guide</a>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Maintenance &amp; Wet-Molding</h3>
+                    <p>Step-by-step guides on oiling, weatherproofing, and custom molding leather to your specific blade.</p>
+                </div>
+                <a href="maintenance.html" class="button card-btn">View the leather maintenance guides</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container" style="text-align: center; margin-top: 40px; padding: 20px 0; border-top: 1px solid #e3dac9; font-size: 0.85rem; color: #7a7266;">
+        &copy; 2026 Leathersheaths.net. All rights reserved.
+    </footer>
+
+</body>
+</html>

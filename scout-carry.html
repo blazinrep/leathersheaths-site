@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Scout Carry Leather Conversion Guide | Leather Sheaths &amp; Gear Reviews</title>
+    <meta name="description" content="A grounded, hands-on guide to horizontal scout carry leather conversions: specs, direct answers to buyer questions, wet-molding your own, and reviews of premium options.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        :root {
+            /* Premium Leather Artisan Palette */
+            --primary: #5c3a21;            /* Rich Oiled Chestnut Leather */
+            --primary-hover: #422817;      /* Dark Horween CXL Leather */
+            --background-color: #fcfbfa;   /* Clean Raw Canvas / Eggshell */
+            --text-color: #1a1613;         /* Deep Charcoal Bark */
+            --accent-brass: #ad8350;       /* Antique Brass Hardware */
+        }
+
+        /* Pico v1 defines its own blue --primary on a higher-specificity selector
+           (:root:not([data-theme=dark])). We override at matching specificity so the
+           chestnut palette wins instead of Pico's default blue. */
+        :root:not([data-theme=dark]),
+        [data-theme=light] {
+            --primary: #5c3a21;
+            --primary-hover: #422817;
+            --primary-focus: rgba(92, 58, 33, 0.25);
+            --primary-inverse: #ffffff;
+        }
+
+        /* Force background and text compliance (Pico dark-mode guard) */
+        html, body {
+            background-color: var(--background-color) !important;
+            color: var(--text-color) !important;
+            padding-top: 20px;
+        }
+
+        /* Inline text links — chestnut instead of Pico's default blue */
+        a {
+            color: var(--primary) !important;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        a:hover { color: var(--primary-hover) !important; }
+        /* Button-styled links keep their white label */
+        a.card-btn { color: #ffffff !important; text-decoration: none; }
+
+        /* Rugged Workshop Hero Banner with thick leather-colored accent bar */
+        .hero {
+            background: #f4eee1 !important; /* Saddle Blanket Cream */
+            padding: 45px 20px;
+            margin-bottom: 35px;
+            text-align: center;
+            border-left: 6px solid var(--primary);
+            border-top: 1px solid #e3dac9;
+            border-right: 1px solid #e3dac9;
+            border-bottom: 1px solid #e3dac9;
+            border-radius: 0; /* square edges required for single-sided accent border */
+        }
+
+        .hero h1 {
+            color: var(--primary) !important; /* Title branded to the leather tone */
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #5a5045 !important;
+            font-style: italic;
+        }
+
+        /* Programmatic AEO Data Table — dark headers for phone legibility, brass kept as accent tick */
+        table {
+            background: #ffffff;
+            border: 1px solid #e3dac9;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        th {
+            background-color: #fdfcfb;
+            color: var(--primary) !important; /* Dark chestnut header text — high contrast */
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            border-left: 3px solid var(--accent-brass); /* Brass hardware accent */
+        }
+
+        td {
+            color: var(--text-color) !important;
+        }
+
+        th, td {
+            border-bottom: 1px solid #e3dac9;
+        }
+
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+        .card {
+            background: #ffffff !important;
+            border: 1px solid #e3dac9;
+            border-left: 4px solid var(--primary); /* Chestnut accent tie-in */
+            border-radius: 6px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.02);
+        }
+
+        .card h3 {
+            color: var(--primary) !important; /* Subheaders match the core leather tone */
+        }
+
+        /* Premium Action Buttons */
+        .card-btn {
+            background-color: var(--primary) !important;
+            border: none;
+            width: 100%;
+            text-align: center;
+            color: #ffffff !important;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background 0.2s ease;
+        }
+        .card-btn:hover { background-color: var(--primary-hover) !important; }
+
+        /* Page-specific helpers (harmonized with the chestnut palette) */
+        .disclosure { background: #f4eee1; border: 1px solid #e3dac9; border-radius: 6px; padding: 15px 20px; margin-bottom: 30px; font-size: 0.9rem; color: #5a5045; }
+        .breadcrumb { font-size: 0.9rem; margin-bottom: 20px; }
+        .spec-flag { display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--primary); text-transform: uppercase; letter-spacing: 0.04em; }
+        figure.card-img { margin: 0 0 15px 0; background: #f4eee1; border-radius: 6px; height: 200px; display: flex; align-items: center; justify-content: center; color: #a89478; font-size: 0.85rem; }
+        .checklist li { margin-bottom: 8px; }
+        .data-matrix { margin: 25px 0 35px 0; }
+        .data-matrix caption { text-align: left; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--primary); font-weight: 600; margin-bottom: 8px; }
+        .data-matrix th { width: 35%; }
+        .direct-answer { font-weight: 700; color: var(--text-color); margin-top: 0; }
+    </style>
+</head>
+<body>
+    <main class="container">
+
+        <nav class="breadcrumb">
+            <a href="index.html">Home</a> &rsaquo; <span>Scout Carry Conversions</span>
+        </nav>
+
+        <header class="hero">
+            <h1>The Ultimate Scout Carry Leather Conversion Guide</h1>
+            <p>How horizontal scout carry actually works, what separates a conversion kit that lasts a decade from one that fails in a season, and the premium leather options worth your money.</p>
+        </header>
+
+        <!-- TOP-LEVEL DATA MATRIX (AEO): edit values to match verified product data before publishing. -->
+        <table class="data-matrix">
+            <caption>Scout Carry Conversion &mdash; Core Specs at a Glance</caption>
+            <tbody>
+                <tr><th scope="row">Fits Model</th><td>[e.g. Mora Companion, ESEE-4, Bushlore &mdash; list verified fits]</td></tr>
+                <tr><th scope="row">Material</th><td>[e.g. 8&ndash;10 oz vegetable-tanned leather]</td></tr>
+                <tr><th scope="row">Carry Style</th><td>Horizontal scout carry (belt-parallel)</td></tr>
+                <tr><th scope="row">Price Bracket</th><td>[e.g. $$ &ndash; mid-range]</td></tr>
+                <tr><th scope="row">Attachment Method</th><td>[e.g. dual riveted &amp; saddle-stitched belt loops]</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Affiliate / review disclosure -->
+        <div class="disclosure">
+            <strong>Disclosure:</strong> [PLACEHOLDER &mdash; insert your affiliate disclosure here. Example: "Some links below are affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend gear we would carry ourselves."]
+        </div>
+
+        <section id="intro">
+            <p>Scout carry is one of the most practical ways to wear a fixed-blade knife, and it is also one of the most misunderstood. Done right, the knife rides horizontally along the small of your back or at the front of the belt, low-profile and out of the way until you reach for it. Done poorly, the sheath sags, rotates, digs into your side when you sit, or slowly works the belt loop loose until the whole rig fails at the worst possible moment.</p>
+            <p>Below we answer the questions buyers actually search before spending money, then expand each into the detail that separates a good conversion from a bad one.</p>
+        </section>
+
+        <hr>
+
+        <section id="questions">
+
+            <h3>What is a scout carry conversion?</h3>
+            <p class="direct-answer">A scout carry conversion is a sheath modification that positions a fixed-blade knife horizontally along the beltline, with the belt passing through two loops on the back of the sheath.</p>
+            <p>The blade sits parallel to your beltline, handle angled toward your dominant hand. Compared to a traditional vertical hip sheath, the horizontal orientation keeps the knife tucked closer to the body, distributes weight across a wider span of the belt, and clears the hip when you are seated, driving, or wearing a pack. The trade-off is a different draw and a hard requirement for real retention, since a heavy blade held sideways is fighting gravity the entire time you wear it.</p>
+
+            <h3>Is leather or Kydex better for scout carry?</h3>
+            <p class="direct-answer">For scout carry specifically, quality vegetable-tanned leather is usually the better choice, because it molds tightly for silent retention and breaks in against the body instead of pressing hard points into your back.</p>
+            <p>Kydex is lighter and fully waterproof, and it has its place. But leather takes wet-molding, which is what makes a true custom horizontal conversion possible at home, and a well-treated piece will outlast several synthetic sheaths. The catch is that leather rewards good construction and punishes bad: thin hide, chrome-tanned stock, glued-only loops, and skipped edge finishing are the failure points to watch for.</p>
+
+            <h3>What should I look for in a scout carry conversion kit?</h3>
+            <p class="direct-answer">Prioritize vegetable-tanned leather in the 8&ndash;10 oz range, belt loops that are riveted <em>and</em> stitched through the body, saddle-stitching, molded retention, and burnished sealed edges.</p>
+            <p>If a listing does not tell you these things, treat that silence as an answer.</p>
+            <ul class="checklist">
+                <li><strong>Leather weight and tannage.</strong> 8&ndash;10 oz vegetable-tanned for the body. Chrome-tanned is softer and will not hold a molded shape under a heavy blade.</li>
+                <li><strong>Loop construction.</strong> Riveted or saddle-stitched through the body, not glued alone &mdash; the single most common failure point on a horizontal rig.</li>
+                <li><strong>Stitching.</strong> A locked saddle-stitch survives a broken thread; a chain stitch can unravel from a single cut.</li>
+                <li><strong>Retention.</strong> A molded fit or a snap/strap that holds the blade even when inverted.</li>
+                <li><strong>Edge finishing.</strong> Burnished, sealed edges resist water wicking into the leather.</li>
+                <li><strong>Fit to your specific blade.</strong> A generic conversion that is loose on your knife will let it rotate.</li>
+            </ul>
+
+            <h3>Can I convert a sheath to scout carry myself?</h3>
+            <p class="direct-answer">Yes &mdash; you can wet-mold your own scout conversion at home with vegetable-tanned leather, and done carefully it can match a shop-built one for retention.</p>
+            <p>The process is straightforward but unforgiving of shortcuts. See the full walkthrough in the <a href="#diy-conversion">step-by-step wet-molding section</a> below, and pair it with our <a href="maintenance.html">leather maintenance and wet-molding guide</a> for oiling and weatherproofing specifics.</p>
+
+            <h3>How does scout carry compare to a fixed-blade hip sheath?</h3>
+            <p class="direct-answer">Scout carry rides lower-profile and clears the hip when seated, while a vertical hip sheath offers a faster, more familiar straight-up draw.</p>
+            <p>Which is right depends on your blade weight and how you move. For heavier working blades and full survival setups, compare against our <a href="fixed-blade.html">fixed-blade survival sheath reviews</a> before deciding on a carry style.</p>
+
+        </section>
+
+        <hr>
+
+        <section id="reviews">
+            <h2>Reviewed: Scout Carry Options Worth Considering</h2>
+            <p><span class="spec-flag">Editor's note</span> &mdash; The cards below are structured placeholders. Drop in the real product name, specs, price, image, and affiliate link for each. Keep any performance claims to things you have actually verified.</p>
+
+            <div class="card-grid">
+
+                <div class="card">
+                    <div>
+                        <figure class="card-img">[ Product Image ]</figure>
+                        <span class="spec-flag">Best Overall</span>
+                        <h3>[Product Name #1]</h3>
+                        <p>[One-line summary of why this earned the top spot &mdash; the specific quality you verified.]</p>
+                        <ul>
+                            <li><strong>Leather:</strong> [weight / tannage]</li>
+                            <li><strong>Loops:</strong> [riveted / stitched]</li>
+                            <li><strong>Fits:</strong> [blade sizes / models]</li>
+                            <li><strong>Price:</strong> [$]</li>
+                        </ul>
+                    </div>
+                    <a href="[AFFILIATE_LINK_1]" class="button card-btn" rel="nofollow sponsored">Check Price</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <figure class="card-img">[ Product Image ]</figure>
+                        <span class="spec-flag">Best Value</span>
+                        <h3>[Product Name #2]</h3>
+                        <p>[One-line summary &mdash; what you give up versus the top pick, and why it is still a solid buy.]</p>
+                        <ul>
+                            <li><strong>Leather:</strong> [weight / tannage]</li>
+                            <li><strong>Loops:</strong> [riveted / stitched]</li>
+                            <li><strong>Fits:</strong> [blade sizes / models]</li>
+                            <li><strong>Price:</strong> [$]</li>
+                        </ul>
+                    </div>
+                    <a href="[AFFILIATE_LINK_2]" class="button card-btn" rel="nofollow sponsored">Check Price</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <figure class="card-img">[ Product Image ]</figure>
+                        <span class="spec-flag">Premium / Custom</span>
+                        <h3>[Product Name #3]</h3>
+                        <p>[One-line summary &mdash; who the custom option is for, and what the extra spend buys.]</p>
+                        <ul>
+                            <li><strong>Leather:</strong> [weight / tannage]</li>
+                            <li><strong>Loops:</strong> [riveted / stitched]</li>
+                            <li><strong>Fits:</strong> [made to order]</li>
+                            <li><strong>Price:</strong> [$]</li>
+                        </ul>
+                    </div>
+                    <a href="[AFFILIATE_LINK_3]" class="button card-btn" rel="nofollow sponsored">Check Price</a>
+                </div>
+
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="diy-conversion">
+            <h2>Wet-Molding Your Own Scout Conversion</h2>
+            <p>If you would rather build the conversion yourself, here is the honest workflow.</p>
+            <ol>
+                <li><strong>Start with the right leather.</strong> Use vegetable-tanned leather &mdash; chrome-tanned will not hold a molded shape. For the sheath body, 8&ndash;10 oz is a good working range.</li>
+                <li><strong>Cut and dry-fit.</strong> Lay out the pattern with the knife, mark your fold and loop positions, and confirm the blade seats fully before any water touches the leather.</li>
+                <li><strong>Set the belt loops first.</strong> Position two horizontal loops sized to your belt width. Rivet and saddle-stitch them through the body &mdash; do not rely on glue alone. This is the joint that carries the load.</li>
+                <li><strong>Wet the leather.</strong> Submerge briefly in cool water until air bubbles stop, then let it return to a damp, pliable state &mdash; not soaking wet. Over-wetting weakens the finished piece.</li>
+                <li><strong>Mold to the blade.</strong> Wrap the knife (protect the edge and wrap the blade in plastic to keep it dry), then press the damp leather firmly around the spine, guard, and handle transition with a bone folder until the shape is crisp.</li>
+                <li><strong>Let it dry fully.</strong> Air-dry at room temperature &mdash; never with direct heat, which cracks and shrinks the leather.</li>
+                <li><strong>Finish and treat.</strong> Burnish the edges, then condition with a leather oil to weatherproof it. See the <a href="maintenance.html">maintenance and wet-molding guide</a> for specifics.</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section id="related">
+            <h2>Keep Reading</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div>
+                        <h3>Fixed-Blade Survival Sheaths</h3>
+                        <p>Heavy-duty leather options built to handle brutal elements and keep your primary edge secure.</p>
+                    </div>
+                    <a href="fixed-blade.html" class="button card-btn">Read the fixed-blade survival sheath reviews</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>Maintenance &amp; Wet-Molding</h3>
+                        <p>Step-by-step guides on oiling, weatherproofing, and custom molding leather to your specific blade.</p>
+                    </div>
+                    <a href="maintenance.html" class="button card-btn">View the leather maintenance guides</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>All Review Categories</h3>
+                        <p>Return to the homepage to browse every review category and buying guide on the site.</p>
+                    </div>
+                    <a href="index.html" class="button card-btn">Browse all leather sheath categories</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="container" style="text-align: center; margin-top: 40px; padding: 20px 0; border-top: 1px solid #e3dac9; font-size: 0.85rem; color: #7a7266;">
+        &copy; 2026 Leathersheaths.net. All rights reserved.
+    </footer>
+
+</body>
+</html>
