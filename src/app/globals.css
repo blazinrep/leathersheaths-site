@@ -1,0 +1,44 @@
+:root {
+  /* Premium Leather Artisan Palette */
+  --primary: #5c3a21;            /* Rich Oiled Chestnut Leather */
+  --primary-hover: #422817;      /* Dark Horween CXL Leather */
+  --background-color: #fcfbfa;   /* Clean Raw Canvas / Eggshell */
+  --text-color: #1a1613;         /* Deep Charcoal Bark */
+  --accent-brass: #ad8350;       /* Antique Brass Hardware */
+  --saddle-cream: #f4eee1;       /* Saddle Blanket Cream */
+  --border-color: #e3dac9;       /* Subtle border */
+  --muted-text: #5a5045;         /* Muted text */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body {
+  padding-top: 20px;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+a.card-btn {
+  color: #ffffff;
+  text-decoration: none;
+}
