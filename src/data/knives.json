@@ -1,0 +1,56 @@
+[
+  {
+    "id": "benchmade-steep-country",
+    "brand": "Benchmade",
+    "modelName": "Steep Country",
+    "segment": "Hunting/Outdoor",
+    "factorySheathFlaw": "Stock injection-molded plastic sheath is bulky, rattles loudly in the brush, and lacks reliable multi-position belt carry options.",
+    "idealLeatherWeight": "8-9 oz vegetable-tanned leather with a thick welt",
+    "optimalCarryStyle": "Vertical deep-woods belt loop or compact scout carry"
+  },
+  {
+    "id": "mkc-blackfoot-2",
+    "brand": "Montana Knife Company",
+    "modelName": "Blackfoot 2.0",
+    "segment": "Hunting/Outdoor",
+    "factorySheathFlaw": "Comes with a rigid Kydex sheath that can dull the cryo-treated edge over time if dirt/grit gets trapped inside the hard shell.",
+    "idealLeatherWeight": "7-8 oz lightweight vegetable-tanned to match the 3.6 oz skeletonized tang",
+    "optimalCarryStyle": "Slim, high-ride hip sheath to maintain a low-profile backcountry footprint"
+  },
+  {
+    "id": "benchmade-940-osborne",
+    "brand": "Benchmade",
+    "modelName": "940 Osborne",
+    "segment": "EDC",
+    "factorySheathFlaw": "Standard metal pocket clip scratches surfaces and creates a noticeable pocket bulge; lacks a dedicated, silent belt-slip option for tactical or formal wear.",
+    "idealLeatherWeight": "5-6 oz supple oil-tanned leather",
+    "optimalCarryStyle": "Pancake-style low-profile belt slip or an angled quick-draw open pouch"
+  },
+  {
+    "id": "spyderco-paramilitary-2",
+    "brand": "Spyderco",
+    "modelName": "Para Military 2",
+    "segment": "EDC",
+    "factorySheathFlaw": "The wide G10 handle and large signature thumb hole tear up pocket edges over time; pocket clip carry exposes the knife to snags in heavy brush.",
+    "idealLeatherWeight": "6-7 oz medium-weight vegetable-tanned leather",
+    "optimalCarryStyle": "Vertical open-top friction-fit sheath or a secure snap-flap field pouch"
+  },
+  {
+    "id": "garrett-pro-pointer-at",
+    "brand": "Garrett",
+    "modelName": "Pro-Pointer AT (Carrot)",
+    "segment": "Metal Detecting",
+    "factorySheathFlaw": "The included woven nylon holster easily frays at the belt seam under hard use, lacks drainage, and sags when saturated with mud or water.",
+    "idealLeatherWeight": "9-10 oz heavy-duty oiled skirting leather with a solid reinforcement welt",
+    "optimalCarryStyle": "Rigid side-draw belt scabbard with integrated water-drainage brass eyelet"
+  },
+  {
+    "id": "lesche-digging-tool",
+    "brand": "Lesche",
+    "modelName": "Standard Digging Knife",
+    "segment": "Metal Detecting",
+    "factorySheathFlaw": "The sharp serrated edge cutting teeth quickly shred thin stock cordura or vinyl holsters from the inside out, posing a puncture risk during heavy ground work.",
+    "idealLeatherWeight": "10-12 oz ultra-heavy saddle leather or dual-layered multi-welt build",
+    "optimalCarryStyle": "Reinforced heavy side-draw sheath with a built-in Kydex inner lining guard"
+  }
+]
