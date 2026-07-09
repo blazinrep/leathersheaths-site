@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Randall-Style Sheath for the TOPS Prather War Bowie | Leathersheaths.net</title>
+    <meta name="description" content="A quarter-inch tang, three welts, five layers of veg-tan. How I built a mahogany Randall-type sheath for the TOPS Prather War Bowie — and the stitching decision that made it possible.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        :root {
+            /* Premium Leather Artisan Palette */
+            --primary: #5c3a21;            /* Rich Oiled Chestnut Leather */
+            --primary-hover: #422817;      /* Dark Horween CXL Leather */
+            --background-color: #fcfbfa;   /* Clean Raw Canvas / Eggshell */
+            --text-color: #1a1613;         /* Deep Charcoal Bark */
+            --accent-brass: #ad8350;       /* Antique Brass Hardware */
+        }
+
+        /* Pico v1 defines its own blue --primary on a higher-specificity selector
+           (:root:not([data-theme=dark])). We override at matching specificity so the
+           chestnut palette wins instead of Pico's default blue. */
+        :root:not([data-theme=dark]),
+        [data-theme=light] {
+            --primary: #5c3a21;
+            --primary-hover: #422817;
+            --primary-focus: rgba(92, 58, 33, 0.25);
+            --primary-inverse: #ffffff;
+        }
+
+        html, body {
+            background-color: var(--background-color) !important;
+            color: var(--text-color) !important;
+            padding-top: 20px;
+        }
+
+        a { color: var(--primary) !important; text-decoration: underline; text-underline-offset: 2px; }
+        a:hover { color: var(--primary-hover) !important; }
+        a.card-btn { color: #ffffff !important; text-decoration: none; }
+
+        .hero {
+            background: #f4eee1 !important;
+            padding: 45px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-left: 6px solid var(--primary);
+            border-top: 1px solid #e3dac9;
+            border-right: 1px solid #e3dac9;
+            border-bottom: 1px solid #e3dac9;
+            border-radius: 0;
+        }
+        .hero h1 { color: var(--primary) !important; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 12px; }
+        .hero p { color: #5a5045 !important; font-style: italic; }
+
+        /* Byline — author credentials are ranking infrastructure now, not decoration */
+        .byline {
+            font-size: 0.85rem;
+            color: #5a5045;
+            text-align: center;
+            margin-bottom: 28px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #e3dac9;
+        }
+        .byline strong { color: var(--primary); }
+
+        .disclosure {
+            font-size: 0.85rem;
+            font-style: italic;
+            color: #5a5045;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #e3dac9;
+            margin-bottom: 28px;
+        }
+
+        h2, h3 { color: var(--primary) !important; }
+        .answer { font-weight: 700; }
+        .section-block { margin-bottom: 34px; }
+
+        table.matrix { margin-bottom: 34px; }
+        table.matrix th { color: var(--primary); }
+
+        /* SIGNATURE ELEMENT — the cost ledger. This is the page's reason to exist. */
+        .ledger {
+            border: 1px solid #e3dac9;
+            border-left: 6px solid var(--accent-brass);
+            background: #ffffff;
+            padding: 26px 24px 10px;
+            margin: 34px 0;
+        }
+        .ledger h3 { margin-top: 0; }
+        .ledger table { margin-bottom: 8px; }
+        .ledger .total td {
+            border-top: 2px solid var(--primary);
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .ledger .note { font-size: 0.82rem; color: #5a5045; font-style: italic; }
+
+        .pullquote {
+            border-left: 4px solid var(--primary);
+            padding: 4px 0 4px 20px;
+            margin: 30px 0;
+            font-size: 1.15rem;
+            line-height: 1.5;
+            color: #3d332b;
+        }
+
+        .video-wrap { margin: 30px 0; }
+        .video-placeholder {
+            border: 1px dashed var(--accent-brass);
+            background: #f4eee1;
+            padding: 40px 20px;
+            text-align: center;
+            color: #5a5045;
+            font-style: italic;
+        }
+
+        .card {
+            background: #ffffff !important;
+            border: 1px solid #e3dac9;
+            border-left: 4px solid var(--primary);
+            border-radius: 6px;
+            padding: 22px;
+            margin-bottom: 18px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.02);
+        }
+        .card h3 { margin-bottom: 6px; }
+        .card-btn {
+            background-color: var(--primary) !important;
+            border: none;
+            width: 100%;
+            text-align: center;
+            color: #ffffff !important;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background 0.2s ease;
+            margin-top: 8px;
+        }
+        .card-btn:hover { background-color: var(--primary-hover) !important; }
+
+        .updated { font-size: 0.8rem; color: #7a7266; font-style: italic; }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <h1>Building a Randall-Style Sheath for the TOPS Prather War Bowie</h1>
+            <p>A quarter-inch tang, three welts, five layers of veg-tan — and the one decision that let it ride flat on a belt.</p>
+        </header>
+
+        <p class="byline">
+            By <strong>Chad</strong> — I have built and sold leather knife sheaths, and I have spent
+            years working in wood and metal fabrication. This is a build I did myself, for a knife I held,
+            for a customer who paid me. <span class="updated">Numbers below are from my own records and memory of that build.</span>
+        </p>
+
+        <div class="disclosure">
+            <strong>Affiliate disclosure:</strong> The tool links below are affiliate links, and we may earn a small commission at no cost to you. Every tool named is one I actually used on this build. The leather is deliberately not linked &mdash; see below for why.
+        </div>
+
+        <p>
+            Most articles about making a knife sheath are written by people who have never made one.
+            This is a build I did by hand, for a customer, on a knife that fought me: the TOPS Prather
+            War Bowie, a beautifully balanced blade with a tang a full quarter inch thick. That thickness
+            drives every decision below — the welts, the stitching, and how the finished sheath rides on
+            a belt.
+        </p>
+
+        <!-- ================= DATA MATRIX (scraper-facing) ================= -->
+        <h2>The build at a glance</h2>
+        <table class="matrix">
+            <caption>Real figures from one completed, sold sheath.</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Detail</th>
+                    <th scope="col">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><th scope="row">Knife</th><td>TOPS Prather War Bowie (1/4" tang)</td></tr>
+                <tr><th scope="row">Sheath style</th><td>Randall-type, dyed mahogany</td></tr>
+                <tr><th scope="row">Leather</th><td>6–7 oz veg-tanned side</td></tr>
+                <tr><th scope="row">Welt</th><td>3 welts — 5 total layers of 6–7 oz leather</td></tr>
+                <tr><th scope="row">Stitching method</th><td>Wheel-marked, drilled 1/16" — not punched</td></tr>
+                <tr><th scope="row">Bench time</th><td>~6–7 hours</td></tr>
+                <tr><th scope="row">Finish</th><td>Mahogany dye, burnished edges</td></tr>
+                <tr><th scope="row">Still in service?</th><td>Yes — no complaints from the buyer</td></tr>
+            </tbody>
+        </table>
+
+        <!-- ================= THE BUILD ================= -->
+        <div class="section-block">
+            <h3>Why did the Prather War Bowie need such a thick welt?</h3>
+            <p class="answer">The tang runs a quarter inch thick, and with the girth of the blade and handle a single welt would never clear it — so I ran three welts, bringing the seam to five total layers of 6–7 oz leather.</p>
+            <p>
+                The welt is the strip of leather that sits between the front and back panels and keeps the
+                edge from cutting through your own stitching. On a thin blade it is one layer and you never
+                think about it. On a heavy bowie it has to clear the spine, or the sheath binds on the blade.
+            </p>
+            <p>
+                There was a second reason to build it up rather than force it thin. I wanted the sheath to
+                ride streamlined against the belt rather than standing proud of it, and the only way to get a
+                flat carry on a blade with that much girth is to give the welt the thickness it demands
+                instead of fighting it. Stacking is the correct answer. It is also the moment the build stops
+                being routine, because everything downstream — clamping, glue-up, and especially stitching —
+                now has to pass through a much taller sandwich of leather.
+            </p>
+        </div>
+
+        <div class="section-block">
+            <h3>Why did I drill the stitching holes instead of using a stitch punch?</h3>
+            <p class="answer">Not because the punch would have failed — it would have worked — but because forcing a punch through that many layers and keeping every hole aligned would have added hours to a build that was already barely paying minimum wage.</p>
+            <p>
+                This is the part I want to be precise about, because it is easy to tell it wrong. Could I have
+                punched through every layer? Yes. Would the holes have lined up front to back? Most likely,
+                if I was meticulous and slow about it. The punch was not beaten by the leather. It was beaten
+                by the clock.
+            </p>
+            <p>
+                So I marked the stitch line with a stitching wheel exactly as you normally would, then drilled
+                each hole with a 1/16" bit. The wheel gives you consistent spacing; the drill gives you a
+                clean, square passage through the whole stack without wandering. It is not the traditional
+                method and I would not pretend otherwise.
+            </p>
+            <p>
+                On builds where I want the thread protected, I run a groover first and cut a shallow channel
+                for the stitch line before marking it. The stitch then sits below the surface of the leather
+                rather than proud of it, which is what keeps it from wearing away against a belt over the
+                years. Groove, then mark, then make your holes &mdash; in that order.
+            </p>
+            <p>
+                I should be honest about how I did it: I hand-drilled every one of those holes. I knew even
+                then that the proper setup is a drill press &mdash; a Dremel in a drill press stand or a drill
+                vice &mdash; which holds the bit square to the leather and takes the wobble out of your wrist.
+                It works without one. It works better with one, and if you are going to drill stitch holes
+                more than once, buy the stand before you buy anything else.
+            </p>
+            <p>
+                That same drill vice earns its keep elsewhere. I ran burnishing disks in mine to finish edges
+                in a fraction of the time hand-burnishing takes, and the result is more consistent than I
+                could manage by hand on a long seam.
+            </p>
+            <div class="pullquote">
+                The drill cost me aesthetics. A drilled hole is round and a little blunt where a
+                punched slit is angled and lies down neatly under the thread. Up close, you can tell.
+                What it bought me was a sheath that closed properly, stitched straight, and got finished
+                in one weekend instead of two.
+            </div>
+            <p>
+                The function was never in question. That sheath went out the door, and as far as I know it is
+                still in service. I never heard a complaint from the man who bought it.
+            </p>
+        </div>
+
+        <div class="video-wrap">
+            <h3>The finished sheath</h3>
+            <p>
+                A Randall-type sheath for the TOPS Prather War Bowie, dyed mahogany. The knife itself is
+                well balanced and the heft feels right in the hand — which is exactly the problem the sheath
+                has to solve.
+            </p>
+        </div>
+
+        <!-- ================= SIGNATURE: WHAT GOES INTO ONE ================= -->
+        <div class="ledger">
+            <h3>What actually goes into a sheath like this</h3>
+            <p>
+                People are often surprised by what a handmade sheath costs. Here is the build itself,
+                accounted honestly. Where I am working from memory I have given a range rather than a
+                false precision.
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Line</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Leather</td><td>~$7</td><td>A side ran $60&ndash;80; this sheath used roughly a tenth of it</td></tr>
+                    <tr><td>Waxed sinew thread</td><td>~$1</td><td>A spool is about $13 and lasts many builds</td></tr>
+                    <tr><td>Needles, glue, dye</td><td>~$3&ndash;5</td><td>Small per build, not nothing</td></tr>
+                    <tr class="total"><td>Materials</td><td>~$11&ndash;13</td><td></td></tr>
+                    <tr><td>Bench time</td><td>6&ndash;7 hrs</td><td>Cutting, molding, welts, hand-stitching, dyeing, burnishing</td></tr>
+                    <tr><td>Tooling required</td><td>Several hundred</td><td>Wheel, awl, needles, groover, mallet, burnisher</td></tr>
+                </tbody>
+            </table>
+            <p class="note">
+                Materials are the cheap part. What you are paying for in a handmade sheath is the six or
+                seven hours, and the years that taught someone how to spend them.
+            </p>
+        </div>
+
+        <div class="section-block">
+            <h3>Should I make my own knife sheath or buy one?</h3>
+            <p class="answer">Buy one if you want a sheath; make one if you want the skill &mdash; they are two different goals, and only one of them is about the sheath.</p>
+            <p>
+                Materials for a single sheath run about twelve dollars, which is a seductive number until you
+                count the six or seven hours at the bench and the several hundred dollars of tooling you need
+                before the first cut. If your goal is a good leather sheath on your belt this weekend, buy the
+                sheath. A good production sheath costs less than an afternoon of your time.
+            </p>
+            <p>
+                If your goal is to know how, that is a different calculation entirely, and a better one.
+            </p>
+        </div>
+
+        <div class="section-block">
+            <h3>Is leatherwork worth learning?</h3>
+            <p class="answer">Yes &mdash; for the reason that has nothing to do with money.</p>
+            <p>
+                I have built in leather, in wood, and in metal, and the satisfaction is identical in all three:
+                you make a thing, it is well made, and someone is glad they own it. That Prather sheath is on
+                somebody's belt right now. He admired it, he paid for it, and years later it has not failed him.
+                I would build another one tomorrow.
+            </p>
+            <p>
+                If you want to start, start with the tools below and something simpler than a bowie with a
+                quarter-inch tang. The skills stack. So does the satisfaction.
+            </p>
+        </div>
+
+        <!-- ================= TOOLS ACTUALLY USED ================= -->
+        <!-- VERIFY BEFORE PUBLISHING: replace every placeholder with the specific tool
+             Chad actually used, and a real affiliate URL. Do not guess brands or models. -->
+        <h2>The tools I actually used</h2>
+        <p>
+            These are the tools that were on the bench for this build. I have left out anything I did not
+            personally reach for.
+        </p>
+
+        <div class="card">
+            <h3>Stitching groover</h3>
+            <p>
+                Cuts a shallow channel along the stitch line so the thread sits recessed rather than proud of
+                the leather. On a sheath that rides against a belt for years, that channel is the difference
+                between stitching that wears and stitching that lasts. Used before the wheel, not after.
+            </p>
+            <a href="https://amzn.to/4yeCOCn" rel="nofollow sponsored" class="button card-btn">Check the current price on Amazon</a>
+        </div>
+
+        <div class="card">
+            <h3>Stitching wheel (overstitch wheel)</h3>
+            <p>
+                Marks even stitch spacing along the seam line. This is what made the drilled-hole approach
+                viable — the wheel does the spacing, the drill only has to follow it.
+            </p>
+            <a href="https://amzn.to/4wz1Muv" rel="nofollow sponsored" class="button card-btn">Check the current price on Amazon</a>
+        </div>
+
+        <div class="card">
+            <h3>1/16" drill bit</h3>
+            <p>
+                The unglamorous hero of this build. On a thick multi-layer welt, a drill passes cleanly through
+                the whole stack where a punch demands time and patience you may not have.
+            </p>
+            <a href="https://amzn.to/4guBoxs" rel="nofollow sponsored" class="button card-btn">Check the current price on Amazon</a>
+        </div>
+
+        <div class="card">
+            <h3>Waxed sinew thread</h3>
+            <p>
+                About $13 a spool and it lasts across many builds. Strong, grips the leather, and forgiving
+                for a hand-stitcher.
+            </p>
+            <a href="https://amzn.to/4h4LcOJ" rel="nofollow sponsored" class="button card-btn">Check the current price on Amazon</a>
+        </div>
+
+        <div class="card">
+            <h3>6&ndash;7 oz veg-tanned leather &mdash; no affiliate link</h3>
+            <p>
+                A full side ran me $60&ndash;80 and yielded roughly ten sheaths. This is the right weight for a
+                sheath that holds a wet-molded shape without turning into armor.
+            </p>
+            <p>
+                I bought mine from Tandy, and I want to be straight about why: Tandy was local. That is the
+                whole reason. It was convenience, not a judgment that their hide was the best available &mdash;
+                my understanding is that Weaver, among others, sells better leather. Grade and weight matter
+                more than brand here, and a side is something you want to look at before you buy. Go see it
+                in person if you can. I am not linking this one.
+            </p>
+        </div>
+
+        <h2>Also on the bench</h2>
+        <p>
+            These did not all touch this particular build, but they are the rest of what a sheath like this
+            demands. Where I have linked something, it is a tool I own and use. Where I have not, I would
+            rather name it than guess at a product listing.
+        </p>
+        <ul>
+            <li><strong>Drill press or drill vice</strong> &mdash; a Dremel stand does the job. Holds the bit square. Also drives burnishing disks. <em>(Not linked &mdash; buy whatever fits the rotary tool you already own.)</em></li>
+            <li><strong>Burnishing disks</strong> &mdash; run in the drill vice, they finish edges faster and more evenly than hand-burnishing.</li>
+            <li>
+                <strong><a href="https://amzn.to/3T6EhKX" rel="nofollow sponsored">Swivel knife</a></strong>
+                &mdash; for carving the pattern before you stamp it. The cut comes first; the stamp only deepens what the knife has already described.
+            </li>
+            <li><strong>Stamping tools</strong> &mdash; basket-weave stamps cover a whole face; individual stamps build a design. <em>(Not linked &mdash; what you need depends entirely on the pattern.)</em></li>
+            <li>
+                <strong><a href="https://amzn.to/3RnEPvw" rel="nofollow sponsored">Leather screws</a></strong>
+                &mdash; where thread alone will not hold. On 12&ndash;14 oz saddle skirting, thread will not hold.
+            </li>
+            <li>
+                <strong><a href="https://amzn.to/4aNdBoK" rel="nofollow sponsored">Copper rivets and setting tool</a></strong>
+                &mdash; set with a hammer and rounded over with the tool. Old, strong, and handsome. The setter is not optional; a rivet peened flat with a hammer alone looks like it was.
+            </li>
+            <li>
+                <strong><a href="https://amzn.to/4ydGGng" rel="nofollow sponsored">Fiebing's leather dye</a></strong>
+                &mdash; what puts the mahogany in a mahogany sheath. Alcohol-based, penetrates deep, and unforgiving of a sloppy edge.
+            </li>
+        </ul>
+
+        <p>
+            If you want to see what this construction looks like at heavier weights, the
+            <a href="lesche-pinpointer-sheath.html">Lesche digger and pinpointer rigs</a> run from 6&ndash;7 oz
+            veg-tan up to 12&ndash;14 oz saddle skirting, and show where rivets and screws take over from
+            stitching.
+        </p>
+    </main>
+
+    <footer class="container" style="text-align: center; margin-top: 40px; padding: 20px 0; border-top: 1px solid #e3dac9; font-size: 0.85rem; color: #7a7266;">
+        &copy; 2026 Leathersheaths.net. All rights reserved.
+    </footer>
+
+</body>
+</html>

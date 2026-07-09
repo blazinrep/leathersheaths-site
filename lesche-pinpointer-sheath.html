@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesche Digger &amp; Pinpointer Sheaths: Side-by-Side, Inline, Separates, or Thigh Rig | Leathersheaths.net</title>
+    <meta name="description" content="Four leather sheath configurations for the Lesche digger and Garrett pinpointer — side-by-side, inline, separates, and thigh rig. Built and sold by hand, with construction specs for each.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        :root {
+            --primary: #5c3a21;
+            --primary-hover: #422817;
+            --background-color: #fcfbfa;
+            --text-color: #1a1613;
+            --accent-brass: #ad8350;
+        }
+
+        /* Pico v1 sets its own blue --primary at higher specificity than plain :root.
+           Match that specificity so the chestnut palette wins. */
+        :root:not([data-theme=dark]),
+        [data-theme=light] {
+            --primary: #5c3a21;
+            --primary-hover: #422817;
+            --primary-focus: rgba(92, 58, 33, 0.25);
+            --primary-inverse: #ffffff;
+        }
+
+        html, body {
+            background-color: var(--background-color) !important;
+            color: var(--text-color) !important;
+            padding-top: 20px;
+        }
+
+        a { color: var(--primary) !important; text-decoration: underline; text-underline-offset: 2px; }
+        a:hover { color: var(--primary-hover) !important; }
+        a.card-btn { color: #ffffff !important; text-decoration: none; }
+
+        .hero {
+            background: #f4eee1 !important;
+            padding: 45px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-left: 6px solid var(--primary);
+            border-top: 1px solid #e3dac9;
+            border-right: 1px solid #e3dac9;
+            border-bottom: 1px solid #e3dac9;
+            border-radius: 0;
+        }
+        .hero h1 { color: var(--primary) !important; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 12px; }
+        .hero p { color: #5a5045 !important; font-style: italic; }
+
+        .byline {
+            font-size: 0.85rem;
+            color: #5a5045;
+            text-align: center;
+            margin-bottom: 26px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #e3dac9;
+        }
+        .byline strong { color: var(--primary); }
+
+        .disclosure {
+            font-size: 0.85rem;
+            font-style: italic;
+            color: #5a5045;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #e3dac9;
+            margin-bottom: 28px;
+        }
+
+        h2, h3 { color: var(--primary) !important; }
+        .answer { font-weight: 700; }
+        .section-block { margin-bottom: 34px; }
+
+        table.matrix th { color: var(--primary); }
+        table.matrix { margin-bottom: 34px; }
+
+        /* Signature element: the build spec panel. Brass on borders only, never text. */
+        .spec {
+            border: 1px solid #e3dac9;
+            border-left: 6px solid var(--accent-brass);
+            background: #ffffff;
+            padding: 22px 24px 6px;
+            margin: 26px 0;
+        }
+        .spec h3 { margin-top: 0; }
+        .spec dt { font-weight: 700; color: var(--primary); }
+        .spec dd { margin: 0 0 12px 0; }
+
+        .pullquote {
+            border-left: 4px solid var(--primary);
+            padding: 4px 0 4px 20px;
+            margin: 30px 0;
+            font-size: 1.12rem;
+            line-height: 1.5;
+            color: #3d332b;
+        }
+
+        .notice {
+            background: #f4eee1;
+            border: 1px solid #e3dac9;
+            padding: 16px 20px;
+            font-size: 0.9rem;
+            margin: 30px 0;
+        }
+
+        .video-wrap { margin: 26px 0; }
+        .video-wrap iframe { width: 100%; aspect-ratio: 16 / 9; height: auto; border: 1px solid #e3dac9; }
+        .video-placeholder {
+            border: 1px dashed var(--accent-brass);
+            background: #f4eee1;
+            padding: 36px 20px;
+            text-align: center;
+            color: #5a5045;
+            font-style: italic;
+        }
+
+        .card {
+            background: #ffffff !important;
+            border: 1px solid #e3dac9;
+            border-left: 4px solid var(--primary);
+            border-radius: 6px;
+            padding: 22px;
+            margin-bottom: 18px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.02);
+        }
+        .card h3 { margin-bottom: 6px; }
+        .card-btn {
+            background-color: var(--primary) !important;
+            border: none;
+            width: 100%;
+            text-align: center;
+            color: #ffffff !important;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background 0.2s ease;
+            margin-top: 8px;
+        }
+        .card-btn:hover { background-color: var(--primary-hover) !important; }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <h1>Lesche Digger &amp; Pinpointer Sheaths</h1>
+            <p>Side-by-side, inline, separates, or thigh rig — four configurations I built by hand and sold.</p>
+        </header>
+
+        <p class="byline">
+            By <strong>Chad</strong> — <strong>Gill's Custom Leather</strong>. I built and sold custom leather
+            sheaths and detecting rigs for years, including Lesche diggers, Garrett pinpointers, the Lesche Sampson
+            shovel, and finds pouches. Every configuration described below is one I made by hand for a paying customer.
+        </p>
+
+        <div class="disclosure">
+            <strong>Affiliate disclosure:</strong> Some links on this page are affiliate links, and we may earn a small
+            commission at no cost to you. The tools linked here are the tools I built rigs around for years. Links to
+            Tandy and other suppliers are unpaid — they are named because that is where I actually bought materials.
+        </div>
+
+        <p>
+            If you swing a detector, you carry a digger and a pinpointer, and how you carry them decides whether the hunt
+            feels smooth or feels like wrestling. I built leather rigs for that gear for years and made the same setup in
+            four different configurations, because customers kept asking for different things. Here is what each one is
+            actually good for.
+        </p>
+
+        <!-- ============ DATA MATRIX ============ -->
+        <h2>The four carry configurations</h2>
+        <table class="matrix">
+            <caption>Configurations I built and sold. Tradeoffs are from customer feedback and my own construction notes.</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Configuration</th>
+                    <th scope="col">Tools carried</th>
+                    <th scope="col">Best for</th>
+                    <th scope="col">Tradeoff</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Side-by-side</th>
+                    <td>Lesche + pinpointer, mounted alongside</td>
+                    <td>Fastest access to both tools</td>
+                    <td>Widest profile on the hip</td>
+                </tr>
+                <tr>
+                    <th scope="row">Inline (piggyback)</th>
+                    <td>Lesche + pinpointer, stacked</td>
+                    <td>Streamlined carry, less bulk</td>
+                    <td>One tool sits behind the other</td>
+                </tr>
+                <tr>
+                    <th scope="row">Separates</th>
+                    <td>Individual Lesche sheath, individual pinpointer sheath</td>
+                    <td>Carrying only what the day needs</td>
+                    <td>Two mounting points on the belt</td>
+                </tr>
+                <tr>
+                    <th scope="row">Thigh rig</th>
+                    <td>Lesche + pinpointer + finds pouch</td>
+                    <td>Everything on one leg-mounted platform</td>
+                    <td>Heaviest build; most leather</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="notice">
+            <strong>These rigs are not currently for sale.</strong> Gill's Custom Leather is not taking commissions.
+            This page documents how the pieces were built and what I learned making them, so you can judge the gear
+            and the options for yourself.
+        </div>
+
+        <!-- ============ BUYER QUESTIONS ============ -->
+        <div class="section-block">
+            <h3>Side-by-side or inline: which Lesche sheath should you get?</h3>
+            <p class="answer">Side-by-side gives you the fastest one-handed draw on both tools; inline stacks them so the rig rides tighter to your body, which is what most customers who asked for a change actually wanted.</p>
+            <p>
+                The side-by-side was my standard build. Both tools sit next to each other, both come out clean, and you
+                never fumble reaching past one to get the other. It works, and it is the configuration I would still
+                recommend to most detectorists.
+            </p>
+            <p>
+                But people kept asking for something more streamlined. The only way to shrink the footprint is to stop
+                putting the tools next to each other and start stacking them — piggybacking one on top of the other.
+                You give up a little access speed and you gain a rig that does not swing wide off your hip when you
+                kneel. That was the trade, and enough customers wanted it that it became its own product.
+            </p>
+        </div>
+
+        <div class="video-wrap">
+            <h3>The side-by-side rig</h3>
+            <iframe
+                src="https://www.youtube.com/embed/1f1R2Q_MzNc"
+                title="Side-by-side leather sheath for Lesche digger and Garrett pinpointer"
+                loading="lazy"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="section-block">
+            <h3>What holds a detecting rig on your belt — loops or snaps?</h3>
+            <p class="answer">I used heavy-duty Line 24 snaps rather than a closed belt loop, so the whole rig comes on and off without unthreading your belt.</p>
+            <p>
+                A sewn belt loop is simpler to make and it is what most sheaths use. It also means that taking the rig
+                off at the end of a hunt requires pulling your belt out of your pants. Line 24 snaps in gunmetal solved
+                that, and they hold a heavy loaded rig without complaint. It is a small decision that you notice every
+                single time you gear up.
+            </p>
+        </div>
+
+        <div class="section-block">
+            <h3>Why line the back of a leather sheath?</h3>
+            <p class="answer">Because the tooled side of veg-tan leather is rough, and that is the side riding against your leg all day.</p>
+            <p>
+                Every rig I built got a lined back. On the sheaths riding against a pant leg I used chrome-tan, which is
+                smooth and finishes clean. On others I used oil-tan, which has a feel and a look I like better on a
+                heavier piece. On the thigh rig I went further and burnished the back as well — a surface nobody would
+                ever see. It is the sort of detail that separates a piece you made from a piece you shipped.
+            </p>
+            <p>
+                I also burnished every edge, including the edges of the belt loop. On a basket-weave-stamped Lesche
+                sheath, burnished edges are most of what makes it look finished rather than merely made.
+            </p>
+        </div>
+
+        <div class="section-block">
+            <h3>How thick does leather have to be before you cannot hand-stitch it?</h3>
+            <p class="answer">On a standard Lesche sheath a saddle stitch all the way around is plenty; on the thigh rig, built from 12–14 oz saddle skirting, I had to use leather screws to hold the assembly together.</p>
+            <p>
+                This is the most useful thing I know about this kind of work, and nobody teaches it. Leathercraft
+                instruction assumes you are making a wallet. When you are building around real tools — a contoured
+                shovel blade, a thick-spined bowie, a loaded rig on a thigh platform — you run out of what conventional
+                construction can do.
+            </p>
+            <div class="pullquote">
+                The thigh rig is double-stitched down the sides, and it still needed screws. The leather was
+                simply too thick and too heavily loaded to trust thread alone.
+            </div>
+            <p>
+                On the Lesche Sampson shovel sheath, the blade's contour and its serrated edge meant I notched the
+                leather to clear the blade and stacked five welts to protect the stitching from the edge. On a Prather
+                War Bowie sheath, the welt ran three to four layers thick, and lining up a stitch punch through that
+                stack would have taken hours I did not have — so I marked the line with a stitching wheel and drilled
+                every hole with a 1/16" bit. The look suffered slightly. The function did not.
+                <a href="prather-war-bowie-sheath-build.html">I wrote up that build and what it paid</a>, if you want
+                the numbers.
+            </p>
+        </div>
+
+        <div class="section-block">
+            <h3>Can a leather rig work with a finds pouch you already own?</h3>
+            <p class="answer">Yes — the thigh rig was built to accept a magnetic-clasp finds pouch, and it holds it securely.</p>
+            <p>
+                The thigh rig carries the Lesche, the pinpointer, and a finds pouch on one leg-mounted platform. I
+                reworked the pouch design across versions — different cuts, sewn down at the bottom — because the first
+                one was not right. That is generally how it goes.
+            </p>
+        </div>
+
+        <!-- ============ BUILD SPEC ============ -->
+        <div class="spec">
+            <h3>Construction, as built</h3>
+            <dl>
+                <dt>Main body (thigh rig)</dt>
+                <dd>12–14 oz saddle skirting</dd>
+
+                <dt>Stitching</dt>
+                <dd>Saddle stitch throughout; double-stitched sides on the thigh rig, plus leather screws</dd>
+
+                <dt>Hardware</dt>
+                <dd>Heavy-duty Line 24 snaps, gunmetal</dd>
+
+                <dt>Back lining</dt>
+                <dd>Chrome-tan or oil-tan, depending on the build</dd>
+
+                <dt>Edges</dt>
+                <dd>Burnished throughout, including belt loops and (on the thigh rig) the back face</dd>
+
+                <dt>Tooling</dt>
+                <dd>Basket-weave stamping on some builds; custom tooling was available and is the single thing that made lead times unmanageable</dd>
+
+                <dt>Materials sourced from</dt>
+                <dd>Tandy Leather (leather, waxed sinew, stitching wheel)</dd>
+            </dl>
+        </div>
+
+        <!-- ============ GEAR ============ -->
+        <!-- VERIFY BEFORE PUBLISHING: confirm each product's current listing and ASIN.
+             Do not guess model names or prices. Placeholders stay until verified. -->
+        <h2>The gear these rigs were built around</h2>
+        <p>
+            I did not test these tools against competitors. I did something narrower and, I think, more useful: I built
+            leather around them, repeatedly, which means I know their dimensions, their balance, and where they catch.
+        </p>
+
+        <div class="card">
+            <h3>Lesche digging tool</h3>
+            <p>
+                The tool every rig here was shaped around. Serrated on one edge, sharpened on the other. Substantial
+                enough that I would expect it to outlast the person using it.
+            </p>
+            <a href="https://amzn.to/3TrLzcg" rel="nofollow sponsored" class="button card-btn">Check the current price on Amazon</a>
+        </div>
+
+        <div class="card">
+            <h3>Lesche Sampson shovel (mini)</h3>
+            <p>
+                A heavier tool with a contoured blade, a serrated edge, and a sharp edge. Building a sheath for it meant
+                notching the leather to the contour and stacking five welts to keep the edges off the stitching.
+            </p>
+            <a href="https://amzn.to/4vUrvxT" rel="nofollow sponsored" class="button card-btn">Check the current price on Amazon</a>
+        </div>
+
+        <div class="card">
+            <h3>Garrett Pro-Pointer</h3>
+            <p>
+                The pinpointer every side-by-side and inline rig was sized for. You draw and re-seat it constantly, so
+                retention and draw angle matter more than they do on almost any other tool you carry.
+            </p>
+            <a href="https://amzn.to/44gFPod" rel="nofollow sponsored" class="button card-btn">Check the current price on Amazon</a>
+        </div>
+
+        <div class="card">
+            <h3>Magnetic-clasp finds pouch &mdash; no link yet</h3>
+            <p>
+                The thigh rig was built to accept one. A wide-mouth trash section matters more than people expect — you
+                are stuffing a bottle cap in one-handed with a detector in the other.
+            </p>
+        </div>
+
+        <p>
+            If you want to see what this kind of construction costs to produce,
+            <a href="prather-war-bowie-sheath-build.html">the Prather War Bowie build breaks down the real hours and
+            materials on a single custom sheath</a>.
+        </p>
+    </main>
+
+    <footer class="container" style="text-align: center; margin-top: 40px; padding: 20px 0; border-top: 1px solid #e3dac9; font-size: 0.85rem; color: #7a7266;">
+        &copy; 2026 Leathersheaths.net &middot; Gill's Custom Leather. All rights reserved.
+    </footer>
+
+</body>
+</html>
