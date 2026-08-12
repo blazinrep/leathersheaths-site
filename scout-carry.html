@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- AdSense ownership verification -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7308855805307493"
+         crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBN1T1L8JZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SBN1T1L8JZ');
+    </script>
+    <title>Scout Carry Leather Sheath Conversions: How Horizontal Carry Actually Works | Leathersheaths.net</title>
+    <meta name="description" content="Hand-built scout carry conversions and what horizontal carry actually requires — leather weight, belt loop construction, retention, and the wet-molding process, from someone who's built them.">
+    <link rel="canonical" href="https://leathersheaths.net/scout-carry">
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        :root {
+            --primary: #5c3a21;
+            --primary-hover: #422817;
+            --background-color: #fcfbfa;
+            --text-color: #1a1613;
+            --accent-brass: #ad8350;
+        }
+
+        /* Pico v1 sets its own blue --primary at higher specificity than plain :root.
+           Match that specificity so the chestnut palette wins. */
+        :root:not([data-theme=dark]),
+        [data-theme=light] {
+            --primary: #5c3a21;
+            --primary-hover: #422817;
+            --primary-focus: rgba(92, 58, 33, 0.25);
+            --primary-inverse: #ffffff;
+        }
+
+        html, body {
+            background-color: var(--background-color) !important;
+            color: var(--text-color) !important;
+            padding-top: 20px;
+        }
+
+        a { color: var(--primary) !important; text-decoration: underline; text-underline-offset: 2px; }
+        a:hover { color: var(--primary-hover) !important; }
+        a.card-btn { color: #ffffff !important; text-decoration: none; }
+
+        .hero {
+            background: #f4eee1 !important;
+            padding: 45px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-left: 6px solid var(--primary);
+            border-top: 1px solid #e3dac9;
+            border-right: 1px solid #e3dac9;
+            border-bottom: 1px solid #e3dac9;
+            border-radius: 0;
+        }
+        .hero h1 { color: var(--primary) !important; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 12px; }
+        .hero p { color: #5a5045 !important; font-style: italic; }
+
+        .byline {
+            font-size: 0.85rem;
+            color: #5a5045;
+            text-align: center;
+            margin-bottom: 26px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #e3dac9;
+        }
+        .byline strong { color: var(--primary); }
+
+        .disclosure {
+            font-size: 0.85rem;
+            font-style: italic;
+            color: #5a5045;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #e3dac9;
+            margin-bottom: 28px;
+        }
+
+        h2, h3 { color: var(--primary) !important; }
+        .answer { font-weight: 700; }
+        .section-block { margin-bottom: 34px; }
+
+        table.matrix th { color: var(--primary); }
+        table.matrix { margin-bottom: 34px; }
+
+        /* Signature element: the build spec panel. Brass on borders only, never text. */
+        .spec {
+            border: 1px solid #e3dac9;
+            border-left: 6px solid var(--accent-brass);
+            background: #ffffff;
+            padding: 22px 24px 6px;
+            margin: 26px 0;
+        }
+        .spec h3 { margin-top: 0; }
+        .spec dt { font-weight: 700; color: var(--primary); }
+        .spec dd { margin: 0 0 12px 0; }
+
+        .pullquote {
+            border-left: 4px solid var(--primary);
+            padding: 4px 0 4px 20px;
+            margin: 30px 0;
+            font-size: 1.12rem;
+            line-height: 1.5;
+            color: #3d332b;
+        }
+
+        .notice {
+            background: #f4eee1;
+            border: 1px solid #e3dac9;
+            padding: 16px 20px;
+            font-size: 0.9rem;
+            margin: 30px 0;
+        }
+
+        .placeholder {
+            border: 1px dashed var(--accent-brass);
+            background: #f4eee1;
+            padding: 10px 16px;
+            font-size: 0.9rem;
+            color: #7a6a4f;
+        }
+
+        .card {
+            background: #ffffff !important;
+            border: 1px solid #e3dac9;
+            border-left: 4px solid var(--primary);
+            border-radius: 6px;
+            padding: 22px;
+            margin-bottom: 18px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.02);
+        }
+        .card h3 { margin-bottom: 6px; }
+        .card-btn {
+            background-color: var(--primary) !important;
+            border: none;
+            width: 100%;
+            text-align: center;
+            color: #ffffff !important;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background 0.2s ease;
+            margin-top: 8px;
+        }
+        .card-btn:hover { background-color: var(--primary-hover) !important; }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 18px 0 24px;
+        }
+        .photo-gallery figure { margin: 0; }
+        .photo-gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #e3dac9;
+            border-radius: 4px;
+        }
+        .photo-gallery figcaption {
+            font-size: 0.78rem;
+            color: #7a7266;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <h1>Scout Carry Leather Sheath Conversions</h1>
+            <p>Horizontal carry, explained by someone who's actually built it — not just written about it.</p>
+        </header>
+
+        <p class="byline">
+            By <strong>Chad</strong> &mdash; <strong>Gill's Custom Leather</strong>. I've hand-built scout carry
+            conversions the same way I built everything else on this site &mdash; wet-molded, saddle-stitched,
+            and fit to the specific knife.
+        </p>
+
+        <div class="disclosure">
+            <strong>Affiliate disclosure:</strong> Some links on this page are affiliate links, and we may earn a
+            small commission at no cost to you. Tool links are the tools I actually use at my own bench.
+        </div>
+
+        <p>
+            Scout carry is one of the most practical ways to wear a fixed-blade knife, and one of the most
+            misunderstood. Done right, the knife rides horizontally along the beltline, low-profile and out of the
+            way until you reach for it. Done poorly, the sheath sags, rotates, or works the belt loop loose until
+            the rig fails. Here's what I've learned building them.
+        </p>
+
+        <!-- ============ DATA MATRIX ============ -->
+        <!-- VERIFY BEFORE PUBLISHING: leather weight/oz and pricing are still unconfirmed — Chad builds
+             per-customer, no fixed spec sheet exists. Leave as-is or update if he supplies numbers. -->
+        <table class="matrix">
+            <caption>Specs from the scout carry conversions built at this bench.</caption>
+            <tbody>
+                <tr><th scope="row">Fits Model</th><td>Built to fit each customer's own working knife &mdash; not a single production model</td></tr>
+                <tr><th scope="row">Material</th><td>Vegetable-tanned leather, wet-molded to the individual blade; finished either plain (natural russet) or basket-weave stamped</td></tr>
+                <tr><th scope="row">Carry Style</th><td>Horizontal scout carry (belt-parallel)</td></tr>
+                <tr><th scope="row">Price Bracket</th><td>Sold as custom commissions to working ranch hands &mdash; not a fixed catalogue price</td></tr>
+                <tr><th scope="row">Attachment Method</th><td>Integrated wraparound belt loop &mdash; the front panel's leather wraps around to the back panel and forms the loop itself, rather than a separate loop sewn on</td></tr>
+            </tbody>
+        </table>
+
+        <div class="notice">
+            <strong>Gill's Custom Leather is not currently taking commissions.</strong> This page documents how
+            these pieces were built, the way the rest of this site does.
+        </div>
+
+        <!-- ============ THE BUILDS ============ -->
+        <div class="spec">
+            <h3>The scout carry rigs I've built</h3>
+            <p>
+                Every one of these was built to one customer's own working knife &mdash; no two are identical.
+                Some are left plain in natural russet leather; others are basket-weave stamped with a tooled
+                border. A few carry the owner's initials, tooled right into the wraparound flap.
+            </p>
+
+            <div class="photo-gallery">
+                <figure>
+                    <img src="/images/scout-carry/scout-carry-pair-mat.jpg" alt="Two scout carry leather sheaths on a cutting mat, tooled with customer initials GDB and LJM, each fit to its own knife" loading="lazy">
+                    <figcaption>Two builds, each tooled with the owner's initials and fit to his own knife.</figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/scout-carry/scout-carry-basketweave-in-hand.jpg" alt="Basket-weave stamped scout carry sheath held in hand next to a knife with a bocote wood handle" loading="lazy">
+                    <figcaption>Basket-weave stamped body with a tooled border along the stitch line.</figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/scout-carry/scout-carry-basketweave-underside.jpg" alt="Underside of a basket-weave scout carry sheath showing the wraparound flap that forms the belt loop" loading="lazy">
+                    <figcaption>The wraparound flap that does double duty as the belt loop.</figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/scout-carry/scout-carry-smooth-desk.jpg" alt="Plain natural russet leather scout carry sheath with a decorative stitched border, next to a wood-handled knife" loading="lazy">
+                    <figcaption>Left plain, with the border stitch as the only decoration.</figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/scout-carry/scout-carry-smooth-open.jpg" alt="Scout carry sheath with visible hardware near the throat, next to a dark wood-handled knife" loading="lazy">
+                    <figcaption>Hardware set near the throat of the sheath.</figcaption>
+                </figure>
+            </div>
+
+            <dl>
+                <dt>Knife(s)</dt>
+                <dd>Custom-fit to each customer's own working knife, not a production model &mdash; handles ran from horn and bone to bocote and other hardwoods.</dd>
+
+                <dt>Leather</dt>
+                <dd>Vegetable-tanned, wet-molded to the individual blade. Some builds finished plain in natural russet; others basket-weave stamped with a tooled border along the stitch line.</dd>
+
+                <dt>Belt loop</dt>
+                <dd>Not a separate piece. The front panel's leather wraps around to the back panel and forms the loop itself &mdash; structural and decorative at once, since the tooling runs right across it.</dd>
+
+                <dt>Retention</dt>
+                <dd>A rivet set at the throat of the sheath, placed precisely enough to create friction against the blade so it can't slide out or fall free. Getting that tension right &mdash; not too loose, not so tight the blade won't seat &mdash; is the hard part of this build.</dd>
+
+                <dt>Built for</dt>
+                <dd>Working cowboys running cattle on large ranches, day in and day out. These are daily-use tools, not display pieces &mdash; several carry the owner's initials tooled into the leather.</dd>
+            </dl>
+        </div>
+
+        <!-- ============ BUYER QUESTIONS ============ -->
+        <div class="section-block">
+            <h3>What is a scout carry conversion?</h3>
+            <p class="answer">A scout carry conversion is a sheath built to ride horizontally along the beltline, with the belt passing through two loops on the back rather than one loop hanging the sheath vertically.</p>
+            <p>
+                The blade sits parallel to your beltline, handle angled toward your dominant hand. Compared to a
+                vertical hip sheath, the horizontal orientation keeps the knife tucked closer to the body,
+                spreads the weight across a wider span of belt, and clears the hip when you're seated, driving,
+                or wearing a pack. The trade-off is a different draw, and a hard requirement for real retention,
+                since a blade held sideways is fighting gravity the entire time you wear it.
+            </p>
+        </div>
+
+        <div class="section-block">
+            <h3>Is leather or Kydex better for scout carry?</h3>
+            <p class="answer">For scout carry specifically, quality vegetable-tanned leather is usually the better choice, because it wet-molds tight for silent retention and breaks in against the body instead of pressing hard points into your back.</p>
+            <p>
+                Kydex is lighter and fully waterproof, and it has its place. But leather takes wet-molding, which
+                is what makes a true custom horizontal conversion possible, and a well-treated piece will outlast
+                several synthetic sheaths. The catch is that leather rewards good construction and punishes bad:
+                thin hide, chrome-tanned stock, glued-only loops, and skipped edge finishing are the failure
+                points to watch for &mdash; on your own builds or anyone else's.
+            </p>
+        </div>
+
+        <div class="section-block">
+            <h3>What holds a scout carry sheath together at the belt loop?</h3>
+            <p class="answer">On my builds, there's no separate belt loop at all &mdash; the front panel's leather wraps around to the back and forms the loop itself, stitched through as part of the body.</p>
+            <p>
+                A horizontal sheath puts more strain on the loop than a vertical one, because the whole weight of
+                the knife pulls sideways against it all day instead of hanging straight down. Making the loop and
+                the body one continuous piece of leather, rather than a strip sewn on separately, is what keeps
+                that joint from being the weak point. It also means the tooling can run straight across the loop
+                without a seam interrupting it &mdash; function and looks solved by the same decision.
+            </p>
+        </div>
+
+        <div class="section-block">
+            <h3>How do you keep the knife from falling out of a scout carry sheath?</h3>
+            <p class="answer">A rivet set at the throat of the sheath, placed precisely enough to create friction against the blade, rather than relying on a snap, strap, or the mold alone.</p>
+            <p>
+                This is the part of a scout carry build that's actually hard, and it's not the part most people
+                expect. The rivet has to sit close enough to the blade to bind against it, but not so tight that
+                the knife won't seat fully or draws hard enough to be annoying. Too loose and the sheath is
+                useless for a working knife &mdash; it'll drop the blade the first time you bend over. I built
+                these for cowboys running cattle on large ranches, all day, every day. That's not a sheath that
+                gets to be almost right.
+            </p>
+        </div>
+
+        <div class="section-block">
+            <h3>Can I convert a sheath to scout carry myself?</h3>
+            <p class="answer">Yes &mdash; you can wet-mold your own scout conversion at home with vegetable-tanned leather, and done carefully it can hold up as well as a shop-built one.</p>
+            <p>
+                The process is straightforward but unforgiving of shortcuts. Here's the honest walkthrough.
+            </p>
+            <ol>
+                <li><strong>Start with the right leather.</strong> Vegetable-tanned only &mdash; chrome-tanned won't hold a molded shape.</li>
+                <li><strong>Cut and dry-fit.</strong> Lay out the pattern with the knife in hand, mark your fold and loop positions, and confirm the blade seats fully before any water touches the leather.</li>
+                <li><strong>Set the belt loops first.</strong> Two horizontal loops sized to your belt width, riveted and stitched through the body. This is the joint that carries the load.</li>
+                <li><strong>Wet the leather.</strong> Submerge briefly until air bubbles stop, then let it return to a damp, pliable state &mdash; not soaking wet. Over-wetting weakens the finished piece.</li>
+                <li><strong>Mold to the blade.</strong> Protect the edge, wrap the knife, then press the damp leather firmly around the spine and handle transition with a bone folder until the shape is crisp.</li>
+                <li><strong>Let it dry fully.</strong> Air-dry at room temperature &mdash; never with direct heat, which cracks and shrinks the leather.</li>
+                <li><strong>Finish and treat.</strong> Burnish the edges, then condition with a leather oil to weatherproof it.</li>
+            </ol>
+        </div>
+
+        <div class="section-block">
+            <h3>How does scout carry compare to a vertical hip sheath?</h3>
+            <p class="answer">Scout carry rides lower-profile and clears the hip when seated; a vertical hip sheath gives a faster, more familiar straight-up draw.</p>
+            <p>
+                Which is right depends on the blade and how you move. For heavier working blades, the construction
+                demands are closer to what's on the
+                <a href="/prather-war-bowie-sheath-build">Prather War Bowie build</a> &mdash; thicker welts,
+                more layers, and a point where thread alone stops being enough. The
+                <a href="/lesche-pinpointer-sheath">Lesche digger and pinpointer rigs</a> show the same tradeoff
+                at the heavy end, where rivets and screws take over from stitching.
+            </p>
+        </div>
+
+        <div class="section-block">
+            <h3>Is a scout carry sheath a beginner leatherworking project?</h3>
+            <p class="answer">No &mdash; the wet-molding and the retention tension are both easy to get wrong, and a scout carry sheath punishes both mistakes more than a simple vertical sheath does.</p>
+            <p>
+                If you're new to leatherwork, start with something simpler and build up to this. The
+                <a href="/prather-war-bowie-sheath-build">Prather War Bowie build</a> and
+                <a href="/custom-leather-pricing-and-batching">pricing and batching notes</a> both go into the
+                tools and the bench time a project like this actually takes.
+            </p>
+        </div>
+
+        <div class="section-block">
+            <h3>Keep Reading</h3>
+            <div class="card">
+                <div>
+                    <h3>Lesche Digger &amp; Pinpointer Sheaths</h3>
+                    <p>Four carry configurations built and sold &mdash; side-by-side, inline, separates, and thigh rig &mdash; with construction specs for each.</p>
+                </div>
+                <a href="/lesche-pinpointer-sheath" class="button card-btn">Compare the four Lesche carry configurations</a>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Randall-Style Sheath for the TOPS Prather War Bowie</h3>
+                    <p>A quarter-inch tang, three welts, five layers of veg-tan &mdash; and the stitching decision that made the build possible.</p>
+                </div>
+                <a href="/prather-war-bowie-sheath-build" class="button card-btn">Read the Prather War Bowie sheath build</a>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>What to Charge for Custom Leather Work</h3>
+                    <p>Real numbers from a shop that ran a six-month backlog &mdash; what customization actually costs, and why batch production is the better business.</p>
+                </div>
+                <a href="/custom-leather-pricing-and-batching" class="button card-btn">Read what custom leather work really pays</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container" style="text-align: center; margin-top: 40px; padding: 20px 0; border-top: 1px solid #e3dac9; font-size: 0.85rem; color: #7a7266;">
+        &copy; 2026 Leathersheaths.net &middot; Gill's Custom Leather. All rights reserved.
+    </footer>
+
+</body>
+</html>
